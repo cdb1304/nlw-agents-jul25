@@ -26,24 +26,30 @@
             <h2 class="title">Assistente de Meta</h2>
             <p>pergunte sobre estratégias, build e dicas para seus jogos!</p>
 
-            <form>
-               <input type="password" placeholder="informe a API KEY do  Gemini" required>
+            <form id="form">
+               <input id="apiKey" type="password" placeholder="informe a API KEY do  Gemini"
+                  value="AIzaSyBAPnMMidInCvGE8HgV6XFQTQVDcq9onVA" required>
 
-               <select>
+               <select id="gameSelect">
                   <option value="">Selecione um jogo</option>
                   <option value="valorant">Valorant</option>
                   <option value="lol">League of Legends</option>
                   <option value="fortnite">Fortnite</option>
+                  <option value="csgo">Counter-Strike: Global Offensive</option>
+                  <option value="apex">Apex Legends</option>
+                  <option value="r6">Rainbow Six Siege</option>
+                  <option value="fifa">EA Sports FC</option>
+                  <option value="nba">NBA 2k</option>
                </select>
 
-               <input type="text" placeholder="Ex: Melhor build para Jett no Valorant..." required>
+               <input id="questionInput" type="text" placeholder="Ex: Melhor build para Jett no Valorant..." required>
 
-               <button>
+               <button id="askButton" type="submit">
                   Perguntar
                </button>
             </form>
 
-            <div id="aiResponse">
+            <div id="aiResponse" class="hidden">
                <div class="response-content">
 
                </div>
@@ -51,6 +57,9 @@
          </div>
       </section>
    </main>
+
+   <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+   <script src="./script.js"></script>
 </body>
 
 </html>
